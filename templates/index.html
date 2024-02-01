@@ -20,6 +20,7 @@
   
   <body>
     {% include 'logo.html' %}
+    
     <div class = 'container'>
     
    <h1  class='text-center mt-2 mb-4'>SITARE UNIVERSITY</h1> 
@@ -27,7 +28,10 @@
     <img id='banner' src="static/SU-Students.jpg"  >
     <h2 class='text-center'> About Sitare</h2>
     <P class='boddy'> 
-    Sitare University is a distinguished institution that stands as a beacon of academic excellence and innovation. Nestled in a serene campus environment, it has consistently been at the forefront of providing high-quality education across a myriad of disciplines. The university prides itself on its commitment to fostering a holistic learning experience, where students are not only equipped with the knowledge necessary for their chosen fields but also encouraged to develop critical thinking skills and a passion for lifelong learning. With state-of-the-art facilities, a diverse and talented faculty, and a vibrant student community, Sitare University creates an atmosphere conducive to intellectual growth and personal development. The university's dedication to research and cutting-edge technology ensures that it remains a dynamic institution, adapting to the evolving demands of the global landscape. Sitare University is not merely an academic institution; it is a hub of creativity, innovation, and the pursuit of excellence in education.</P>
+
+     Sitare University offering 100% scholarships to underprivileged students to pursue computer science engineering with world-class facilities:
+
+      Sitare University stands out as a beacon of opportunity, offering a transformative path for bright minds from underprivileged backgrounds. Recognizing the transformative power of education, they provide 100% scholarships to deserving students, opening doors to the exciting world of computer science engineering. At Sitare, exceptional students can unlock their potential amidst world-class facilities and a vibrant learning environment. Imagine studying alongside renowned faculty, utilizing cutting-edge technology, and honing your skills in state-of-the-art labs, all without financial constraints. This remarkable initiative empowers individuals to shape their futures and contribute meaningfully to the ever-evolving technological landscape. Sitare University isn't just an institution; it's a catalyst for social change, nurturing the next generation of tech leaders, one brilliant mind at a time.</P>
       <h2 class='text-center mt-2 mb-4'>Open Positions</h2>
       <div>
         {% for job in job %}
@@ -38,8 +42,8 @@
       
       <div class='text-center'>
       
-      <button class='btn btn-primary btn-lg'>Contact us</button>
-        <p class='mt-4'>@ Copyright 2024, Sitare foundation </p>
+      <a class='btn btn-primary btn-lg' href='mailto:saurabhagrahari0988@gmail.com?subject=question%20about%20job%20openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%3A%3Center%20your%20question%3E%0D%0A'>Contact us</a>
+        <p class='mt-4'>@ Copyright 2024<a href='https://sitare.org/' > Sitare foundation</a></p>
       </div>
     </div>
     
@@ -47,5 +51,6 @@
     
     
   </body>
+  
   
 </html>
