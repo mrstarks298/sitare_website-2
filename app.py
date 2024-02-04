@@ -36,7 +36,7 @@ def list_jobs():
 @app.route('/application_form.html')
 def world():
   return render_template('application_form.html')
-@app.route('/apply now',methods=['post'])
+@app.route('job/apply',methods=['post'])
 def helo_duniya():
   data=request.form
   return render_template('application_submitted.html',application=data)
