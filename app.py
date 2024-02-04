@@ -1,8 +1,10 @@
-from flask import Flask, render_template
 
-#create flask aplication
+from flask import Flask, render_template, request, jsonify
+
+# Create Flask application
 app = Flask(__name__)
-#crete python list
+
+# Create Python list
 JOBS = [{
     'id': 1,
     'title': 'Asistent prof. Python ',
@@ -20,26 +22,28 @@ JOBS = [{
     'Salary': 'Rs.200000'
 }]
 
-#rejister the rout to the aplication
-#inside the rout the path of the page will mention
-
-
+# Register the route to the application
 @app.route('/')
 def hellow_world():
-  return render_template('index.html', job=JOBS)
+    return render_template('index.html', job=JOBS)
 
-
-#we can show data in json formate by:
+# Show data in JSON format
 @app.route('/api/jobs')
 def list_jobs():
-  return jsonify(JOBS)
+    return jsonify(JOBS)
+
+#we can show data in json formate by:
+@app.route('/apply',methods=['post'])
+def helo_duniya():
+  data=request.form
+  return render_template('application_submitted.html',application=data)
+
 @app.route('/job/<id>')
 def show_job(id):
-  job=JOBS['id']
-  return jsonify(job)
-  
-  
-
+    for job in JOBS:
+        if str(job['id']) == id:
+            return jsonify(job)
+    return jsonify({"error": "Job not found"}), 404
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True)
