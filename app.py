@@ -33,6 +33,12 @@ def hellow_world():
 @app.route('/api/jobs')
 def list_jobs():
   return jsonify(JOBS)
+@app.route('/job/<id>')
+def show_job(id):
+  job=JOBS['id']
+  return jsonify(job)
+  
+  
 
 
 if __name__ == "__main__":
