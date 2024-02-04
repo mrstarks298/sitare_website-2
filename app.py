@@ -33,7 +33,10 @@ def list_jobs():
     return jsonify(JOBS)
 
 #we can show data in json formate by:
-@app.route('/apply',methods=['post'])
+@app.route('/application_form.html')
+def world():
+  return render_template('application_form.html')
+@app.route('/apply now',methods=['post'])
 def helo_duniya():
   data=request.form
   return render_template('application_submitted.html',application=data)

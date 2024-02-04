@@ -3,9 +3,9 @@
     "app.py": [
       {
         "id": "57c0ef3a-7fc7-4e2d-b674-055197aa830e",
-        "line": 47,
-        "version": 561,
-        "index": 891
+        "line": 2,
+        "version": 759,
+        "index": 1
       }
     ],
     "templates/logo.html": [
