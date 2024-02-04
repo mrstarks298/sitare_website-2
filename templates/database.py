@@ -1,6 +1,6 @@
-import pymysql
-import sqlalchemy
 import pandas as pd
+import pymysql
+from sqlalchemy import create_engine
 
 # Create a SQLAlchemy engine
 engine = sqlalchemy.create_engine(
@@ -8,7 +8,7 @@ engine = sqlalchemy.create_engine(
 )
 
 # Execute a query and fetch the result into a Pandas DataFrame
-df = pd.read_sql_query("SELECT * FROM * from employee", con=engine)
+df = pd.read_sql_query("SELECT * FROM  employee", con=engine)
 
 # Print the DataFrame
 print(df)
